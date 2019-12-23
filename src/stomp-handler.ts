@@ -281,7 +281,7 @@ export class StompHandler {
 
     if (this.forceBinaryWSFrames && typeof rawChunk === 'string') {
       rawChunk = new TextEncoder().encode(rawChunk);
-      this.debug('///////// TextEncoder().encode(rawChunk) /////////');
+      this.debug(`///////// TextEncoder().encode(${rawChunk}) /////////`);
     }
 
     if (typeof rawChunk !== 'string' || !this.splitLargeFrames) {
