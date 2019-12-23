@@ -335,7 +335,7 @@ export class Client {
    */
   public activate(): void {
     this._active = true;
-    console.log("============================");
+    this.debug('=============== 2ONLINE ===============');
     this._connect();
   }
 

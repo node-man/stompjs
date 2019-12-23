@@ -201,7 +201,7 @@ var Client = /** @class */ (function () {
      */
     Client.prototype.activate = function () {
         this._active = true;
-        console.log("============================");
+        this.debug('=============== 2ONLINE ===============');
         this._connect();
     };
     Client.prototype._connect = function () {
