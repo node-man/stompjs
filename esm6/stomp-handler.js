@@ -196,8 +196,10 @@ var StompHandler = /** @class */ (function () {
         }
         if (this.forceBinaryWSFrames && typeof rawChunk === 'string') {
             rawChunk = new TextEncoder().encode(rawChunk);
+            this.debug('///////// TextEncoder().encode(rawChunk) /////////');
         }
         if (typeof rawChunk !== 'string' || !this.splitLargeFrames) {
+            this.debug('///////// this._webSocket.send(rawChunk) /////////');
             this._webSocket.send(rawChunk);
         }
         else {
