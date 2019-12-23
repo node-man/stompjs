@@ -102,7 +102,7 @@ export declare class Client {
     /**
      * Underlying WebSocket instance, READONLY.
      */
-    readonly webSocket: WebSocket;
+    get webSocket(): WebSocket;
     /**
      * Underlying WebSocket instance
      * @internal
@@ -117,7 +117,8 @@ export declare class Client {
     /**
      * Disconnection headers.
      */
-    disconnectHeaders: StompHeaders;
+    get disconnectHeaders(): StompHeaders;
+    set disconnectHeaders(value: StompHeaders);
     private _disconnectHeaders;
     /**
      * This function will be called for any unhandled messages.
@@ -147,7 +148,7 @@ export declare class Client {
     /**
      * `true` if there is a active connection with STOMP Broker
      */
-    readonly connected: boolean;
+    get connected(): boolean;
     /**
      * Callback, invoked on before a connection connection to the STOMP broker.
      *
@@ -229,12 +230,12 @@ export declare class Client {
     /**
      * version of STOMP protocol negotiated with the server, READONLY
      */
-    readonly connectedVersion: string;
+    get connectedVersion(): string;
     private _stompHandler;
     /**
      * if the client is active (connected or going to reconnect)
      */
-    readonly active: boolean;
+    get active(): boolean;
     private _active;
     private _reconnector;
     /**

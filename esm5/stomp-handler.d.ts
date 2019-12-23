@@ -34,9 +34,9 @@ export declare class StompHandler {
     maxWebSocketChunkSize: number;
     forceBinaryWSFrames: boolean;
     appendMissingNULLonIncoming: boolean;
-    readonly connectedVersion: string;
+    get connectedVersion(): string;
     private _connectedVersion;
-    readonly connected: boolean;
+    get connected(): boolean;
     private _connected;
     private readonly _subscriptions;
     private readonly _receiptWatchers;
