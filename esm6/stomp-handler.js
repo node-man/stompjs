@@ -199,7 +199,7 @@ var StompHandler = /** @class */ (function () {
             this.debug("///////// TextEncoder().encode(" + rawChunk + ") /////////");
         }
         if (typeof rawChunk !== 'string' || !this.splitLargeFrames) {
-            this.debug('///////// this._webSocket.send(rawChunk) /////////');
+            this.debug("///////// this._webSocket.send(rawChunk) " + rawChunk + " /////////");
             this._webSocket.send(rawChunk);
         }
         else {

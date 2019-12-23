@@ -285,7 +285,7 @@ export class StompHandler {
     }
 
     if (typeof rawChunk !== 'string' || !this.splitLargeFrames) {
-      this.debug('///////// this._webSocket.send(rawChunk) /////////');
+      this.debug(`///////// this._webSocket.send(rawChunk) ${rawChunk} /////////`);
       this._webSocket.send(rawChunk);
     } else {
       let out = rawChunk as string;
