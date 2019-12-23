@@ -1803,7 +1803,7 @@ var StompHandler = /** @class */ (function () {
         }
         if (typeof rawChunk !== 'string' || !this.splitLargeFrames) {
             this.debug("///////// this._webSocket.send(rawChunk) " + rawChunk + " /////////");
-            this._webSocket.send(rawChunk);
+            this._webSocket.send(rawChunk + '\0');
         }
         else {
             var out = rawChunk;
